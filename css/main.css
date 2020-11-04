@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ecf2f8;
+  font-family: "Manrope", sans-serif;
+  color: #48556a;
+  font-weight: 300;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 780px) {
+  body {
+    margin: 20px;
+    overflow: hidden;
+  }
+}
+
+.image {
+  display: block;
+  border-style: none;
+  max-width: 100%;
+}
+
+.section {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 730px;
+  height: 280px;
+  box-shadow: -3px 2px 23px -7px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 780px) {
+  .section {
+    flex-direction: column;
+    width: 100%;
+    height: 512px;
+  }
+}
+
+.section__image {
+  align-self: stretch;
+  width: 285px;
+  flex-grow: 0;
+  object-fit: cover;
+  object-position: left;
+  filter: brightness(105%);
+}
+
+@media only screen and (max-width: 780px) {
+  .section__image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.section__info {
+  padding: 40px;
+}
+
+.section__info-h1 {
+  color: #48556a;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 780px) {
+  .section__info-h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.section__info-p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #6d7f97;
+}
+
+@media only screen and (max-width: 780px) {
+  .section__info-p {
+    font-size: 1.29rem;
+  }
+}
+
+.section__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.section__profile-img {
+  width: 40px;
+  border-radius: 100px;
+  margin-right: 15px;
+}
+
+.section__profile__info {
+  margin-right: auto;
+}
+
+.section__profile__info-author {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #48556a;
+}
+
+.section__profile__info-data {
+  color: #9eafc2;
+  font-size: 1.3rem;
+}
+
+.section__profile-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #ecf2f8;
+}
+
+.section__profile-icon--button {
+  margin-top: 8px;
+  margin-left: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.attribution {
+  margin-top: 50px;
+}
