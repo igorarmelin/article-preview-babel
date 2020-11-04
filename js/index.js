@@ -1,3 +1,10 @@
-const x = name => `Hello ${name}!`
+import {share} from './share.js';
 
-console.log(x('Igor'))
+share.forEach(share => {
+    if(!share.actived) {
+        const media = document.querySelectorAll(`#${share.name}`)
+        media.forEach(item => {
+            item.classList.add('disabled')
+        });
+    }
+})
