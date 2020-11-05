@@ -160,7 +160,14 @@ body {
   z-index: 1000;
 }
 
-.tooltip:hover .tooltip-social-media {
+
+@media only screen and (max-width: 780px) {
+  .tooltip .tooltip-social-media {
+    left: -90px;
+  }
+}
+
+.tooltip.show .tooltip-social-media {
   visibility: visible;
 }
 
