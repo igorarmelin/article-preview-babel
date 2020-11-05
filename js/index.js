@@ -1,4 +1,5 @@
 import {share} from './share.js';
+import navigatorShare from './navigator.js'
 
 /* FILTRO ACTIVED */
 share.forEach(share => {
@@ -21,22 +22,4 @@ buttonTooltip.addEventListener("click", () => {
     addClassDiv.classList.toggle(nameClass)
 })
 
-/* API NAVIGATOR.SHARE */
-const shareUrl = document.querySelector("#browser")
-const title = window.document.title
-const url = window.document.location.href
-
-shareUrl.addEventListener('click', () => {
-    
-    if(navigator.share) {
-        navigator.share({
-            title: `${title}`,
-            url: `${url}`
-        }).then(() => {
-            console.log('Obrigado por compartilhar!')
-        })
-        .catch(console.error)
-    } else {
-        navigator.clipboard.writeText(`${title} - *Veja mais em: * ${url}`)
-    }
-})
+navigatorShare()
