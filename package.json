@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "http-server -a localhost -p 8000 -c-1",
-    "build": "babel js/index.js -d js-transpiled"
+    "build": "babel js -d js-transpiled"
   },
   "keywords": [],
   "author": "",

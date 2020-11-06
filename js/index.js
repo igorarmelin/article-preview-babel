@@ -1,5 +1,9 @@
 import {share} from './share.js';
-import navigatorShare from './navigator.js'
+import navigatorShare from './navigator.js';
+import uuidv4 from './uuid.js'
+/* import { v4 as uuidv4 } from 'https://jspm.dev/uuid'; //Funciona porém não é uma boa prática
+import { v4 as uuidv4 } from 'uuid'; */ //Maneira correta, porém apresenta erro
+
 
 /* FILTRO ACTIVED */
 share.forEach(share => {
@@ -22,4 +26,5 @@ buttonTooltip.addEventListener("click", () => {
     addClassDiv.classList.toggle(nameClass)
 })
 
-navigatorShare()
+/* API NAVIGATOR.SHARE */
+navigatorShare(uuidv4())
