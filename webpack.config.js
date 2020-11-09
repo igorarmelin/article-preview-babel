@@ -32,10 +32,10 @@ module.exports = {
                 test: /\.js$/,
                 // we don't wanna run the loader on node_modules contents
                 exclude: /node_modules/,
-                use: {
+                use: [
                     // specifying to use babel-loader
-                    loader: 'babel-loader',
-                }
+                    'babel-loader',
+                ]
             },
             {
                 test: /\.css$/,
@@ -45,9 +45,9 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg)$/,
-                use: {
-                    loader: 'file-loader'
-                }
+                use: [
+                    'file-loader'
+                ]
             }
         ]
     },
@@ -56,7 +56,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             // the HTML5 template to use
-            template: './public/index.html',
+            template: './src/index.html',
             // the emitted html file name
             filename: './index.html',
         })
