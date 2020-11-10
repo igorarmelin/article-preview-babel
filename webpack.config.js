@@ -45,9 +45,13 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg)$/,
-                use: [
-                    'file-loader'
-                ]
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "images"
+                    }
+                }
             }
         ]
     },
@@ -56,7 +60,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             // the HTML5 template to use
-            template: './src/index.html',
+            template: './index.html',
             // the emitted html file name
             filename: './index.html',
         })
